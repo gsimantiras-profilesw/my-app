@@ -15,8 +15,7 @@ describe('MyServiceService', () => {
   });
 
   it('should be created', () => {
-    const service: MyServiceService = TestBed.get(MyServiceService);
-    expect(service).toBeTruthy();
+    expect(myService).toBeTruthy();
   });
 
   it('should return expected res (HttpClient called once)', () => {
