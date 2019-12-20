@@ -8,9 +8,13 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display Entity', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to my-app!');
+    expect(page.getTitleText()).toEqual('Entity');
+  });
+
+  it('should navigate to list component', () => {
+    page.navigateTo('/list').then(() => expect(page.getTitleText()).toEqual('Entity'));
   });
 
   afterEach(async () => {
