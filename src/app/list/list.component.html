@@ -1,2 +1,5 @@
 <h1>{{title}}</h1>
-<input id="my-input" (onChange)="valueChanged($event)" />
+
+<app-ma-field (onChange)="getVal($event)"></app-ma-field>
+
+<div *ngFor="let item of dataFiltered">{{item}}</div>

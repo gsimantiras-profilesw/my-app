@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-list',
@@ -7,17 +7,35 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ListComponent implements OnInit {
   @Input() title: string = "Entity";
-  @Output() valChanged: EventEmitter<any>;
 
-
+  public dataFiltered = []
+  public data = [
+    'george',
+    'nick',
+    'stas',
+    'kuriakos',
+    'george'
+  ]
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() { 
+
+    //set filtered data after getting data
+    this.dataFiltered = this.setFilteredData(this.data)
   }
 
-
-  valueChanged($event) {
-    this.valChanged.emit('e');
+  // output input val
+  getVal(inputVal) {
+    this.dataFiltered = this.setFilteredData(this.filterByVal(this.data, inputVal));
   }
 
+  // filter data
+  filterByVal(data: any[], inputVal: string): any[] {
+    return data.filter(val => val.indexOf(inputVal) > -1);
+  }
+
+  // return new array
+  setFilteredData(data: any[]): any[] {
+    return [...data];
+  }
 }

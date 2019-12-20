@@ -21,7 +21,6 @@
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
     "core-js": "^2.5.4",
-    "rxjs": "~6.5.3",
     "tslib": "^1.9.0",
     "zone.js": "0.9.1"
   },
@@ -32,6 +31,7 @@
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
+    "@types/rx": "^4.1.1",
     "codelyzer": "~4.5.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",

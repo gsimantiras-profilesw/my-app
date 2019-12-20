@@ -32,6 +32,7 @@ describe('MyServiceService', () => {
   });
 });
 
+// fake async call
 export function asyncData<T>(data: T) {
   return defer(() => Promise.resolve(data));
 }
