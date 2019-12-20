@@ -1,8 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 
 import { MyServiceService } from './my-service.service';
-import { HttpClient } from '@angular/common/http';
-import { observable, Observable, defer } from 'rxjs';
+import { defer } from 'rxjs';
 
 describe('MyServiceService', () => {
   let httpClientSpy: { get: jasmine.Spy };
